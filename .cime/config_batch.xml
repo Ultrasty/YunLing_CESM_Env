@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config_batch version="2.1">
+
+  <batch_system MACH="JinSi" type="slurm" >
+    <batch_submit>sbatch</batch_submit>
+    <submit_args>
+      <arg flag="--time" name="$JOB_WALLCLOCK_TIME"/>
+      <arg flag="-p" name="$JOB_QUEUE"/>
+    </submit_args>
+    <queues>
+      <queue nodemin="1" nodemax="20" default="true">normal</queue>
+    </queues>
+  </batch_system>
+
+</config_batch>

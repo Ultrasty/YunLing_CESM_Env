@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<config_machines version="2.0">
+
+  <machine MACH="JinSi">
+    <DESC>Fudan JinSi</DESC>
+    <NODENAME_REGEX>JinSi</NODENAME_REGEX>
+    <OS>CentOS</OS>
+    <COMPILERS>gnu</COMPILERS>
+    <MPILIBS>openmpi</MPILIBS>
+    <PROJECT>NSCC-GZ</PROJECT>
+    <CIME_OUTPUT_ROOT>/public/home/fwx_zh/CESM2/cases</CIME_OUTPUT_ROOT>
+    <DIN_LOC_ROOT>/public/home/fwx_zh/CESM2/inputdata</DIN_LOC_ROOT>
+    <DIN_LOC_ROOT_CLMFORC>$DIN_LOC_ROOT/atm/datm7</DIN_LOC_ROOT_CLMFORC>
+    <DOUT_S_ROOT>$CASEROOT/archive</DOUT_S_ROOT>
+    <BASELINE_ROOT>USERDEFINED_optional_run</BASELINE_ROOT>
+    <CCSM_CPRNC>USERDEFINED_optional_test</CCSM_CPRNC>
+    <GMAKE_J>4</GMAKE_J>
+    <BATCH_SYSTEM>slurm</BATCH_SYSTEM>
+    <SUPPORTED_BY>Chenjingkun-nscc_gz</SUPPORTED_BY>
+    <MAX_TASKS_PER_NODE>36</MAX_TASKS_PER_NODE>
+    <MAX_MPITASKS_PER_NODE>36</MAX_MPITASKS_PER_NODE>
+    <mpirun mpilib="openmpi">
+      <executable>srun</executable>
+      <arguments>
+        <arg name="label"> --label</arg>
+        <arg name="num_tasks" > -n {{ total_tasks }}</arg>
+      </arguments>
+    </mpirun>
+    <module_system type="none"/>
+    <environment_variables>
+      <env name="OMP_STACKSIZE">64M</env>
+      <env name="NETCDF_HOME">/public/home/fwx_zh/CESM2/spack-0.23.0/var/spack/environments/cesm2env/.spack-env/._view/kzp4zjmfoot5b3dl6smaswupevbfcbi6</env>
+      <env name="NETCDF_PATH">/public/home/fwx_zh/CESM2/spack-0.23.0/var/spack/environments/cesm2env/.spack-env/._view/kzp4zjmfoot5b3dl6smaswupevbfcbi6</env>
+    </environment_variables>
+  </machine>
+
+</config_machines>

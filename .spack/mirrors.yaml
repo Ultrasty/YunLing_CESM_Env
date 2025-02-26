@@ -1,0 +1,2 @@
+mirrors:
+  local_filesystem: file:///public/home/fwx_zh/CESM2/cesm_spack_mirror

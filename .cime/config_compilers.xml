@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<config_compilers version="2.0">
+
+<compiler MACH="JinSi" COMPILER="gnu">
+  <CFLAGS>
+    <append DEBUG="FALSE"> -O2 </append>
+  </CFLAGS>
+  <FFLAGS>
+    <append DEBUG="FALSE"> -O2 </append>
+  </FFLAGS>
+  <NETCDF_PATH>/public/home/fwx_zh/CESM2/spack-0.23.0/var/spack/environments/cesm2env/.spack-env/._view/kzp4zjmfoot5b3dl6smaswupevbfcbi6</NETCDF_PATH>
+  <SLIBS>
+    <base> -L${NETCDF_PATH}/lib -lnetcdf -lnetcdff -lopenblas </base>
+  </SLIBS>
+</compiler>
+
+</config_compilers>

@@ -1,0 +1,66 @@
+compilers:
+- compiler:
+    spec: gcc@=4.4.7
+    paths:
+      cc: /usr/bin/gcc44
+      cxx: /usr/bin/g++44
+      f77: null
+      fc: null
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@=4.8.5
+    paths:
+      cc: /usr/bin/gcc
+      cxx: /usr/bin/g++
+      f77: /usr/bin/gfortran
+      fc: /usr/bin/gfortran
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: intel@=17.0.5
+    paths:
+      cc: /public/software/compiler/intel/intel-compiler-2017.5.239/bin/intel64/icc
+      cxx: /public/software/compiler/intel/intel-compiler-2017.5.239/bin/intel64/icpc
+      f77: /public/software/compiler/intel/intel-compiler-2017.5.239/bin/intel64/ifort
+      fc: /public/software/compiler/intel/intel-compiler-2017.5.239/bin/intel64/ifort
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@=7.2.0
+    paths:
+      cc: /public/software/compiler/gnu/7.2.0/bin/gcc
+      cxx: /public/software/compiler/gnu/7.2.0/bin/g++
+      f77: /public/software/compiler/gnu/7.2.0/bin/gfortran
+      fc: /public/software/compiler/gnu/7.2.0/bin/gfortran
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
+- compiler:
+    spec: gcc@=9.5.0
+    paths:
+      cc: /public/home/fwx_zh/CESM2/spack-0.23.0/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.5.0-wvd4t5mkcmu6xgqcj63liyhmvq2ahaxl/bin/gcc
+      cxx: /public/home/fwx_zh/CESM2/spack-0.23.0/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.5.0-wvd4t5mkcmu6xgqcj63liyhmvq2ahaxl/bin/g++
+      f77: /public/home/fwx_zh/CESM2/spack-0.23.0/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.5.0-wvd4t5mkcmu6xgqcj63liyhmvq2ahaxl/bin/gfortran
+      fc: /public/home/fwx_zh/CESM2/spack-0.23.0/opt/spack/linux-centos7-haswell/gcc-4.8.5/gcc-9.5.0-wvd4t5mkcmu6xgqcj63liyhmvq2ahaxl/bin/gfortran
+    flags: {}
+    operating_system: centos7
+    target: x86_64
+    modules: []
+    environment: {}
+    extra_rpaths: []
