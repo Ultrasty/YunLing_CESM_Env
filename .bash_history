@@ -1,84 +1,3 @@
-ll
-cd CESM2
-ll
-cd test/
-ll
-spack env activate cesm3env
-which mpicc
-which gcc
-which mpicxx
-which mpirun
-mpicc -o simplempi simplempi.c 
-ldd simplempi
-srun -p normal -n 4 simplempi
-mpirun -n 4 simplempi
-mpirun -np 4 simplempi
-exit
-spakc env activate cesm3env
-spack env activate cesm3env
-cd ~/CESM2
-ll
-cd spack-0.23.0/var/spack/environments/cesm3env/
-nano spack.yaml 
-spack install
-srun -p normal -c 36 --pty bash
-ll
-module avail
-ll
-cd ~/.spack/
-ll
-nano packages.yaml 
-rm packages.yaml 
-ll
-spack find
-cat ~/.bashrc
-which mpicc
-which mpicxx
-which gcc
-spack load gcc@9.5.0
-module list
-module load mpi/openmpi/gnu/4.0.3
-ll
-cd ~
-ll
-cd CESM2/
-cd test/
-ll
-srun -p normal -n 4 simplempi
-export SLURM_MPI_TYPE=pmix
-srun -p normal -n 4 simplempi
-spack load gcc@9.5.0%gcc@4.8.5
-srun -p normal -n 4 simplempi
-module load compiler/gnu/7.2.0
-which gcc
-which g++
-which gfortran
-spack unload gcc
-srun -p normal -n 4 simplempi
-module unload compiler/gnu/7.2.0
-module load compiler/gnu/7.3.1
-module unload compiler/gnu/7.2.0
-module load compiler/gnu/7.3.1
-srun -p normal -n 4 simplempi
-which mpicc
-which gcc
-mpicc -o simplempi simplempi.c 
-srun -p normal -n 4 simplempi
-module list
-module avail
-module load mpi/openmpi/gnu/4.0.3
-which gcc
-gcc --version
-cd CESM2/
-ll
-cd test/
-ll
-mpicc -o simplempi-gcc485 simplempi.c 
-srun -p normal -n 4 simplempi
-export SLURM_MPI_TYPE=pmix
-srun -p normal -n 4 simplempi
-mpicc -o simplempi-gcc485 simplempi.c 
-srun -p normal -n 4 simplempi-gcc485 
 module purge
 which gcc
 which g++
@@ -998,3 +917,460 @@ ll
 cd run
 ll
 squeue
+cat env_batch.xml  |grep 20
+./case.submit 
+squeue
+scancel 2228010
+scancel 2227898
+scancel 2224503
+squeue
+scancel 2224503
+squeue
+ll
+cd run
+ll
+cat cesm.log.2228066.250227-031633
+ll
+squeue
+ll
+cat cesm.log.2228066.250227-031633
+ll
+pwd
+squeue
+scancel 2228066
+scancel 2228067
+squeue
+cd ..
+ll
+cp ../B1850/user_nl_cam .
+ll
+cat user_nl_cam
+./case.submit 
+squeue
+cd run
+ll
+squeue
+ll
+cd ..
+ll
+cd archive/
+ll
+cd atm/
+ll
+cd hist/
+ll
+cd ..
+ll
+cd ..
+ll
+cd ..
+ll
+cd run/
+ll
+cd ..
+ll
+cd logs/
+ll
+cd ..
+ll
+cd ..
+ll
+cd ..
+ll
+cd cases/
+ll
+cd B1850-pe216
+ll
+cd logs/
+ll
+cd ..
+ll
+cd run
+ll
+cd ..
+ll
+cd archive/
+ll
+cd logs/
+ll
+cd ~
+ll
+history
+nano ~/.bashrc
+echo $PROMPT_COMMAND
+#1740648781
+history
+#1740648793
+ll
+#1740648806
+history
+#1740648815
+ls -alh
+#1740648819
+history
+#1740648855
+spack find
+#1740648856
+history
+#1740649078
+spack env list
+#1740649093
+spack env activate cesm2env
+#1740649108
+spack env deactivate 
+#1740649110
+spack compiler list
+#1740649112
+spack
+#1740649120
+spack info
+#1740649128
+spack info gcc
+#1740649151
+spack info openmpi@5.0.5
+#1740649181
+history
+#1740649224
+sinfo
+#1740649344
+mamba create -n singularity
+#1740649350
+mamba activate singularity
+#1740649429
+cat ~/.bashrc
+#1740649439
+ll
+#1740649359
+mamba install singularity
+#1740649652
+conda install singularity
+#1740649772
+export http_proxy=http://127.0.0.1:7898
+#1740649775
+export https_proxy=http://127.0.0.1:7898
+#1740649795
+sinfo
+#1740649785
+conda install singularity
+#1740650156
+curl www.google.com
+#1740650187
+curl www.baidu.com
+#1740650190
+curl www.google.com
+#1740650213
+ll
+#1740650216
+cd netcdf/
+#1740650217
+ll
+#1740650218
+cd ..
+#1740650219
+ll
+#1740650382
+sinfo
+#1740650390
+clear
+#1740650392
+sinfo
+#1740650423
+srun -p bio -c 36 lscpu
+#1740650442
+srun -p bio -c 36 nproc
+#1740650445
+srun -p bio  nproc
+#1740650453
+srun -p bio lscpu
+#1740650466
+srun -p normal lscpu
+#1740650480
+srun -p huge lscpu
+#1740650502
+srun -p test lscpu
+#1740650536
+sinfo
+#1740650551
+srun -p normal lscpu
+#1740650198
+conda install singularity
+#1740651363
+cd /public/home/fwx_zh/CESM2/CESM/cime/scripts
+#1740651404
+./create_newcase --case /public/home/fwx_zh/CESM2/cases/B1850-pe324 --pecount 324  --compset B1850 --res f09_g17 --machine JinSi  --run-unsupported
+#1740651424
+cd /public/home/fwx_zh/CESM2/cases/B1850-pe324
+#1740651442
+./case.setup
+#1740651467
+cp ../B1850-pe216/user_nl_cam .
+#1740651473
+cat user_nl_cam
+#1740651485
+srun -p huge -c 36 ./case.build --skip-provenance-check
+#1740651914
+cat env_batch.xml 
+#1740651918
+cat env_batch.xml  | grep 20
+#1740651937
+./xmlchange JOB_WALLCLOCK_TIME=10:20:00
+#1740651952
+./xmlchange walltime=10:20:00
+#1740651968
+cat env_batch.xml  | grep 20
+#1740651981
+./case.submit 
+#1740652009
+squeue
+#1740652128
+ll
+#1740652129
+cd run
+#1740652130
+ll
+#1740652139
+squeue
+#1740652144
+ll
+#1740652154
+cat cesm.log.2230058.250227-182638
+#1740652175
+cd ..
+#1740652176
+ll
+#1740652178
+cd run
+#1740652178
+ll
+#1740652188
+squeue
+#1740653045
+ll
+#1740653050
+cd ..
+#1740653051
+ll
+#1740653053
+cd archive/
+#1740653053
+ll
+#1740653055
+cd atm/
+#1740653056
+ll
+#1740653057
+cd hist/
+#1740653058
+ll
+#1740653113
+cd ..
+#1740653114
+ll
+#1740653115
+cd ..
+#1740653116
+ll
+#1740653117
+cd logs/
+#1740653118
+ll
+#1740666997
+cd CESM
+#1740667000
+cd CESM2
+#1740667001
+ll
+#1740667031
+cat ~/.bashrc
+#1740667010
+wget https://zenodo.org/api/records/14938309/files-archive
+#1740667062
+cd CESM2/
+#1740667081
+ll
+#1740667087
+cat ~/.bashrc
+#1740667072
+wget https://zenodo.org/records/14938309/files/cesm_2.1.3.tar.gz?download=1
+#1740667234
+wget https://www.jianguoyun.com/c/dl-pubdir/cesm_2.1.3.tar.gz?td=sscjhe&xbgy=1&ip=111.187.110.87&w=PmtHbvC2p5G7JhpHGs1jD1tXrVLIJDvnWaQrSKsH5gI&hs=DRmOM9sQjsjlBxiou-oFIAA&ix=%2FCESM%E6%BA%90%E7%A0%81%2Fcesm_2.1.3.tar.gz&cid=_EiiAnBxFKsZZBEzgUzc-g
+#1740667437
+wget https://zenodo.org/records/14938309/files/cesm_2.1.3.tar.gz?download=1
+#1740667872
+cd "/public/home/fwx_zh/CESM2"
+#1740667885
+wget wget https://zenodo.org/records/14938309/files/cesm_2.1.3.tar.gz?download=1
+#1740667964
+wget https://zenodo.org/records/14938309/files/cesm_2.1.3.tar.gz?download=1
+#1740668021
+cd "/public/home/fwx_zh"
+#1740668042
+wget https://zenodo.org/records/14938309/files/cesm_2.1.3.tar.gz?download=1
+#1740668145
+cat /etc/hosts
+#1740668154
+cat /etc/hosts | grep login
+#1740726224
+history
+#1740726228
+ll
+#1740726236
+cd CESM2/
+#1740726237
+ll
+#1740726244
+rm cesm_2.1.3.tar.gz*
+#1740726246
+ll
+#1740726250
+wget https://zenodo.org/records/14938309/files/cesm_2.1.3.tar.gz?download=1
+#1740729794
+ll
+#1740729804
+rm cesm_2.1.3.tar.gz 
+#1740729966
+ll
+#1740729977
+cd CESM2/
+#1740729977
+ll
+#1740729986
+rm cesm2.1.3local.tar.gz 
+#1740729990
+rm cesm2.1.3xingyi.tar.gz 
+#1740729817
+wget https://zenodo.org/records/14938309/files/cesm_2.1.3.tar.gz?download=1
+#1740729999
+rm -rf cesm2.1.3
+#1740730028
+ll
+#1740730043
+mv cesm_2.1.3.tar.gz\?download\=1 cesm_2.1.3.tar.gz
+#1740730052
+mv cesm_2.1.3.tar.gz CESM2/
+#1740730055
+ll
+#1740730057
+cd CESM2/
+#1740730057
+ll
+#1740730065
+mv cesm2.1.1.tar.gz cesm_2.1.1.tar.gz
+#1740730066
+ll
+#1740730125
+ll
+#1740730135
+tar -xvzf cesm_2.1.3.tar.gz 
+#1740730166
+mv cesm_2.1.3 CESM2.1.3
+#1740730167
+ll
+#1740730172
+cd CESM2.1.3
+#1740730173
+ll
+#1740730175
+cd cime
+#1740730176
+ll
+#1740730177
+cd scripts/
+#1740730178
+ll
+#1740730221
+cd /public/home/fwx_zh/CESM2/CESM2.1.3/cime/scripts
+#1740730222
+ll
+#1740730245
+./create_newcase --case /public/home/fwx_zh/CESM2/cases/B1850-cesm2.1.3 --pecount 216  --compset B1850 --res f09_g17 --machine JinSi  --run-unsupported
+#1740730247
+cd /public/home/fwx_zh/CESM2/cases/B1850-cesm2.1.3
+#1740730253
+ll
+#1740730257
+./case.setup 
+#1740730275
+cd /public/home/fwx_zh/CESM2/cases/B1850-cesm2.1.3/
+#1740730278
+ll
+#1740730279
+wpd
+#1740730280
+pwd
+#1740730298
+cd /public/home/fwx_zh/CESM2/cases/B1850-cesm2.1.3
+#1740730299
+ll
+#1740730302
+./case.setup
+#1740730304
+srun -p huge -c 36 ./case.build --skip-provenance-check
+#1740730942
+./case.submit 
+#1740730967
+squeue
+#1740730982
+cat ~/.cime/config_machines.xml 
+#1740731329
+squeue
+#1740731330
+ll
+#1740731335
+cd run
+#1740731335
+ll
+#1740731437
+squeue
+#1740731448
+cat cesm.log.2232478.250228-162241
+#1740731458
+ll
+#1740730085
+wget https://zenodo.org/records/14938309/files/cesm_2.2.1.tar.gz
+#1740734292
+squeue
+#1740734294
+ll
+#1740734302
+cd ar
+#1740734304
+cd ..
+#1740734306
+ll
+#1740734308
+cd archive/
+#1740734309
+ll
+#1740734313
+cd logs/
+#1740734313
+ll
+#1740734319
+cd ..
+#1740734320
+ll
+#1740734323
+cd lnd
+#1740734324
+ll
+#1740734326
+cd hist/
+#1740734327
+ll
+#1740734328
+cd ..
+#1740734328
+ll
+#1740734330
+cd ..
+#1740734330
+ll
+#1740734336
+cd ocn/
+#1740734337
+ll
+#1740734338
+cd hist/
+#1740734339
+ll

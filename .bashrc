@@ -12,6 +12,12 @@ fi
 # User specific aliases and functions
 
 alias ll='ls -alh'
+
+export HISTSIZE=100000
+export HISTFILESIZE=200000
+export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
 #source /public/home/fwx_zh/CESM2/spack-0.23.0/share/spack/setup-env.sh
 
 # >>> conda initialize >>>
